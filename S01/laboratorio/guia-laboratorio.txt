@@ -1,0 +1,24 @@
+Los estudiantes construyen una página web con el editor Sublime Text 2 y utilizan los recursos aprendidos en la semana.
+La página web debe cumplir los siguientes requerimientos
+a) El tema para la página web será  “El internet de la cosas”.
+b) Debe tener un título principal, definición, aplicaciones, características y conclusiones.
+c) La página web debe tener la estructura básica
+d) En el <HEAD> debe tener los siguientes metadatos:
+
+      a. Titulo (Title) (no pasar de 60 caracteres)
+            • <title>titulo pensado </title>
+      b. Dirección de la página web
+            • <base href="http://www.example.com/page.html">
+      c. Descripción (Description) - Este contenido debe ser un resumen de lo que se incluye en la página web (No pasar de 160 caracteres)
+           • <META name="description" content="Esta es la descripción general de la página">
+     d. Palabras Clave (Keywords) - Es un recurso que acelera la búsqueda de tu página web.
+           •  <META name="keywords" content="Palabras clave separadas por comas">
+           • <META name="keywords" content="empresarial,instrucciones,catálogos">
+
+e) En el <BODY> debe tener las siguientes estructura:
+       a. Encabezado
+       b. Contenido
+            i. Titulo
+            ii. Subtitulo
+            iii. Párrafo
+            iv. Imagen
