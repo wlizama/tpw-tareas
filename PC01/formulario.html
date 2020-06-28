@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        .sub-pie {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            color: #9ba8f1;
+            height: 25px;
+            line-height: 25px;
+        }
+        .sub-pie div {
+            margin: 0 15px;
+        }
+        .pie-iconos {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 5px 0;
+            height: 50px;
+            line-height: 50px;
+            color: white;
+        }
+        .pie-iconos ul {
+            padding: 0;
+            margin: 0;
+            margin-left: 15px;
+        }
+        .pie-iconos ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 0 5px;
+        }
+        .pie-iconos ul li a {
+            text-decoration: none;
+            display: inline-block;
+        }
+        .pie-iconos ul li a img {
+            height: 24px;
+        }
+    </style>
+    <title>Covid-19 News - Contacto</title>
+</head>
+<body>
+    <header class="cabecera">
+        <div>
+            <img src="./images/covid19-transparent.png" style="height: 100%;" alt="logo">
+            <h1>Covid-19 News</h1>
+        </div>
+    </header>
+    <nav class="navegacion">
+        <ul>
+            <li><a href="#!">Enlace 1</a></li>
+            <li><a href="#!">Enlace 2</a></li>
+            <li><a href="#!">Enlace 3</a></li>
+            <li><a href="#!">Enlace 4</a></li>
+            <li><a href="formulario.html">Contacto</a></li>
+            <li><a href="#!">Enlace 6</a></li>
+        </ul>
+    </nav>
+    <main class="main-container">
+        <div class="section-container">
+            <form method="GET" action="">
+                <h2>Formulario de Registro</h2>
+                <div>
+                    <label for="txtNombre">Nombre</label>
+                    <div>
+                        <input id="txtNombre" type="text" maxlength="50" />
+                    </div>
+                </div>
+                <div>
+                    <label for="txtApellidos">Apellidos</label>
+                    <div>
+                        <input id="txtApellidos" type="text" maxlength="50" />
+                    </div>
+                </div>
+                <div>
+                    <label>Sexo</label>
+                    <div>
+                        <div style="margin-right: 20px;">
+                            <input type="radio" name="sexos" id="rbHombre">
+                            <label for="rbHombre">Hombre</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="sexos" id="rbMujer">
+                            <label for="rbMujer">Mujer</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label for="txtCorreo">Correo</label>
+                    <div>
+                        <input id="txtCorreo" type="text" />
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input type="checkbox" id="chk01" style="margin-right: 15px;" checked />
+                        <label for="chk01">Deseo registrarme para recibir información</label>
+                    </div>
+                </div>
+                <div class="botones">
+                    <input type="reset" value="Limpiar" />
+                    <input type="submit" value="Enviar" />
+                </div>
+            </form>
+        </div>
+        <aside class="posts-recientes">
+            <h2>Posts recientes</h2>
+            <div class="posts-content">
+                <div>
+                    <img src="./images/post01.png" alt="">
+                    <a href="#!">
+                        El mapa que muestra el número de infectados y muertos en el mundo por el nuevo coronavirus
+                    </a>
+                </div>
+                <div>
+                    <img src="./images/post02.png" alt="">
+                    <a href="#!">
+                        Qué es la inmunidad cruzada y por qué puede ser clave en la lucha contra el coronavirus
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <footer class="pie-principal">
+        <div style="background-color: rgb(67, 78, 142);">
+            <div class="sub-pie">
+                <div>Avenida La Encalada cdra. 17 s/n - Surco, Lima 33, Peru</div>
+                <div>Copyright © 2020 - Todos los derechos reservados</div>
+            </div>
+        </div>
+        <div style="background-color: rgb(56, 65, 116);">
+            <div class="pie-iconos">
+                <div>Encuentranos en</div>
+                <ul>
+                    <li>
+                        <a href="#!"><img src="./images/logo-facebook.png" alt="Logo Facebook" title="Facebook"></a>
+                    </li>
+                    <li>
+                        <a href="#!"><img src="./images/logo-twitter.png" alt="Logo Twitter" title="Twitter"></a>
+                    </li>
+                    <li>
+                        <a href="#!"><img src="./images/logo-instagram.png" alt="Logo Instagram" title="Instagram"></a>
+                    </li>
+                    <li>
+                        <a href="#!"><img src="./images/logo-youtube.png" alt="Logo Youtube" title="Youtube"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

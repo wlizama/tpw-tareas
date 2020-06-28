@@ -160,3 +160,53 @@ body {
 .pie-principal > div {
     width: 100%;
 }
+
+
+.section-container form {
+    margin: 0 30px;
+}
+.section-container form h2 {
+    width: 100%;
+    color: brown;
+    text-align: center;
+}
+.section-container form h2::after{
+    content: '';
+    height: 2px;
+    width: 80%;
+    background-color: #f0f0f0;
+    display: block;
+    margin: 0 auto;
+}
+.section-container form div {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.section-container form div > label:first-child {
+    width: 100px;
+}
+.section-container form div input[type='text'] {
+    border: none;
+    border-bottom: 1px solid rgb(67, 78, 142);
+    width: 250px;
+}
+.section-container form div.botones input {
+    margin-right: 20px;
+    height: 40px;
+    color: rgb(67, 78, 142);
+    font-weight: bold;
+    width: 120px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.section-container form div.botones input[type='reset'] {
+    border: 1px solid rgb(67, 78, 142);
+    background-color: transparent;
+    text-decoration: underline;
+}
+.section-container form div.botones input[type='submit'] {
+    border: 2px solid rgb(19, 28, 80);
+    background-color: rgb(67, 78, 142);
+    color: white;
+}
