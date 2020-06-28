@@ -4,16 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <style>
+        .sub-pie {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            color: #9ba8f1;
+            height: 25px;
+            line-height: 25px;
+        }
+        .sub-pie div {
+            margin: 0 15px;
+        }
+        .pie-iconos {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 5px 0;
+            height: 50px;
+            line-height: 50px;
+            color: white;
+        }
+        .pie-iconos ul {
+            padding: 0;
+            margin: 0;
+            margin-left: 15px;
+        }
+        .pie-iconos ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 0 5px;
+        }
+        .pie-iconos ul li a {
+            text-decoration: none;
+            display: inline-block;
+        }
+        .pie-iconos ul li a img {
+            height: 24px;
+        }
+    </style>
     <title>Covid-19 News</title>
 </head>
 <body>
-    <header >
+    <header class="cabecera">
         <div>
-            <img src="" alt="">
+            <img src="./images/covid19-transparent.png" style="height: 100%;" alt="logo">
             <h1>Covid-19 News</h1>
         </div>
     </header>
-    <nav >
+    <nav class="navegacion">
         <ul>
             <li><a href="!#">Enlace 1</a></li>
             <li><a href="!#">Enlace 2</a></li>
@@ -23,40 +65,97 @@
             <li><a href="!#">Enlace 6</a></li>
         </ul>
     </nav>
-    <div>
-        <div>
-            <section>
+    <main class="main-container">
+        <div class="section-container">
+            <section class="section-article">
                 <h2>Section 1</h2>
                 <div>
                     <article>
                         <h3>Articulo 1.1</h3>
-                        <p>texto 1.1</p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate
+                            iure, maxime fugit ipsam pariatur nam blanditiis. Sint aliquam placeat
+                            maxime sit ea. Iste voluptate nobis cum modi praesentium possimus veritatis.
+                        </p>
                     </article>
                     <article>
                         <h3>Articulo 1.1</h3>
-                        <p>texto 1.1</p>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolorum 
+                            officiis, quaerat dolorem, unde aspernatur temporibus id qui ut quae nesciunt 
+                            nisi maxime at velit eligendi laudantium sunt. Laudantium, odit.
+                        </p>
                     </article>
                 </div>
             </section>
-            <section>
+            <section class="section-article">
                 <h2>Section 2</h2>
                 <div>
                     <article>
                         <h3>Articulo 2.1</h3>
-                        <p>texto 2.1</p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis vero reprehenderit, 
+                            minus velit nam facilis nesciunt et tempora aliquid, itaque cumque ipsam. Optio, eligendi? 
+                            Possimus nemo maxime suscipit quidem cum?
+                        </p>
+                        <img src="./images/covid19-red-yellow.png" alt="">
                     </article>
                     <article>
                         <h3>Articulo 2.1</h3>
-                        <p>texto 2.1</p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur sunt itaque quasi hic consequuntur 
+                            ratione alias minus voluptas quo cupiditate cumque natus dolorum labore impedit ex 
+                            unde, officiis et amet?
+                        </p>
+                        <img src="./images/covid19-blue.png" alt="">
                     </article>
                 </div>
             </section>
         </div>
-        <aside>Contenido complementario</aside>
-    </div>
-    <footer>
-        <div>direccion-derechos</div>
-        <div>iconos redes sociales</div>
+        <aside class="posts-recientes">
+            <h2>Posts recientes</h2>
+            <div class="posts-content">
+                <div>
+                    <img src="./images/post01.png" alt="">
+                    <a href="!#">
+                        El mapa que muestra el número de infectados y muertos en el mundo por el nuevo coronavirus
+                    </a>
+                </div>
+                <div>
+                    <img src="./images/post02.png" alt="">
+                    <a href="!#">
+                        Qué es la inmunidad cruzada y por qué puede ser clave en la lucha contra el coronavirus
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <footer class="pie-principal">
+        <div style="background-color: rgb(67, 78, 142);">
+            <div class="sub-pie">
+                <div>Avenida La Encalada cdra. 17 s/n - Surco, Lima 33, Peru</div>
+                <div>Copyright © 2020 - Todos los derechos reservados</div>
+            </div>
+        </div>
+        <div style="background-color: rgb(56, 65, 116);">
+            <div class="pie-iconos">
+                <div>Encuentranos en</div>
+                <ul>
+                    <li>
+                        <a href="!#"><img src="./images/logo-facebook.png" alt="Logo Facebook" title="Facebook"></a>
+                    </li>
+                    <li>
+                        <a href="!#"><img src="./images/logo-twitter.png" alt="Logo Twitter" title="Twitter"></a>
+                    </li>
+                    <li>
+                        <a href="!#"><img src="./images/logo-instagram.png" alt="Logo Instagram" title="Instagram"></a>
+                    </li>
+                    <li>
+                        <a href="!#"><img src="./images/logo-youtube.png" alt="Logo Youtube" title="Youtube"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
