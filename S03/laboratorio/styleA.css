@@ -1,0 +1,42 @@
+h1 { color: #29887f; }
+h2 { color: blue }
+
+.red { color: red }
+.red-underline {
+    color: red;
+    text-decoration: underline;
+ }
+ .red-bold {
+    color: red;
+    font-weight: bold;
+ }
+ .yellow { color: yellow }
+ .yellow-bold {
+    color: yellow;
+    font-weight: bold;
+}
+ .green { color: green }
+ .green-underline {
+    color: green;
+    text-decoration: underline;
+}
+.greensuave { color: rgb(91, 196, 91) }
+.blue { color: blue }
+.blue-italic {
+    color: blue;
+    font-style: italic;
+}
+.purple { color: purple }
+.purplesuave { color: rgb(197, 48, 197) }
+
+table {
+    border-collapse: collapse;
+}
+table tr > td  {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+table > caption {
+    color: blue;
+}
