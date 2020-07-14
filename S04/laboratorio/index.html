@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu desplegable</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 
+        Menu desplegable con las sgtes secciones
+        
+        - Inicio
+        - Colaboradores
+            - Colaborador 1
+            - Colaborador 2
+        - Contactenos
+            - Reportar un error
+            - Servicio de soporte
+        
+        Las subsecciones deben aparecer al pasar el cursor sobre la seccion
+     -->
+     <nav class="main-nav">
+         <ul class="menu-root">
+             <li class="menu"><a href="#Inicio">Inicio</a></li>
+             <li class="menu" data-submenu-id="#mncolaboradores">
+                <a href="#Colaboradores">Colaboradores</a>
+                <ul id="mncolaboradores" class="submenu-root">
+                    <li class="submenu"><a href="#Colaborador1">Colaborador 1</a></li>
+                    <li class="submenu"><a href="#Colaborador2">Colaborador 2</a></li>
+                </ul>
+            </li>
+             <li class="menu" data-submenu-id="#mnContactenos">
+                <a href="#Contactenos">Contactenos</a>
+                <ul id="mnContactenos" class="submenu-root">
+                    <li class="submenu"><a href="#reportar-error">Reportar error</a></li>
+                    <li class="submenu"><a href="#soporte">Servicio de soporte</a></li>
+                </ul>
+            </li>
+         </ul>
+     </nav>
+     <main class="main-section">
+         <section>
+            <h1>Covid-19</h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt maxime 
+                ipsum magni dicta accusamus voluptatem fugit. Atque, laboriosam ipsum
+                corrupti, eos modi explicabo eligendi illum dolorem eum, blanditiis quaerat iste.
+            </p>
+         </section>
+     </main>
+     <footer class="main-footer">
+        <span>&copy; 2020 Todos los derechos reservados</span>
+     </footer>
+     <script src="./script.js"></script>
+</body>
+</html>
