@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Calculadora operaciones básicas</h1>
+    <form id='mainForm' class='calc'>
+        <div class="operation">
+            <div>
+                <input id="txtNumb1" type="number" value="0">
+                <input id="txtNumb2" type="number" value="0">
+                <input id="txtResult" disabled value="0">
+            </div>
+        </div>
+        <div class="buttons">
+            <div class='calc-row'>
+                <button type="button" class="button-operator" value="+">+</button>
+                <button type="button" class="button-operator" value="-">-</button>
+                <button type="button" class="button-operator" value="*">*</button>
+                <button type="button" class="button-operator" value="/">/</button>
+            </div>
+            <div class="calc-row">
+                <button type="button" class="button-operator" value="++">++</button>
+                <button type="button" class="button-operator" value="--">--</button>
+                <button type="button" class="button-operator" value="mod">mod</button>
+                <button id="btnReset" type="reset" class="button-reset">C</button>
+            </div>
+        </div>
+    </form>
+    <script src="./script.js"></script>
+</body>
+</html>
