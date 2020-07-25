@@ -47,7 +47,7 @@ footer {
     color: rgb(202, 202, 202);
 }
 
-.frm-registro {
+.registro {
     background-color: rgba(233, 233, 233, 0.6);
     text-align: center;
     width: 100%;
@@ -55,17 +55,17 @@ footer {
     border-bottom: 1px solid rgb(232, 232, 232)
 }
 
-.frm-registro div {
+.registro div {
     padding: .7em 0;
     display: inline-block;
 }
 
-.frm-registro div label {
+.registro div label {
     font-size: 1.4em;
     font-weight: bold;
 }
 
-.frm-registro div input[type="text"] {
+.registro div input {
     height: 28px;
     font-size: 1.4em;
     border-radius: 0;
@@ -75,22 +75,23 @@ footer {
     margin: 0 10px;
 }
 
-.frm-registro div button[type="submit"] {
+.registro div button {
     padding: 4px 15px;
     background-color: rgb(41, 58, 102);
     color: white;
     font-size: 1.1em;
     border: 2px solid rgb(16, 22, 39);
     border-radius: 4px;
+    transition: .3s all;
 }
 
-.frm-registro div button[type="submit"]:hover,
-.frm-registro div button[type="submit"]:active {
+.registro div button:hover {
     background-color: rgb(13, 33, 85);
     border: 2px solid rgb(16, 22, 39);
 }
 
 .candidatos {
+    visibility: hidden;
     width: 100%;
     text-align: center;
     background-color: rgba(31, 44, 78, 0.31);
@@ -108,7 +109,7 @@ footer {
     height: 280px;
 }
 
-.candidatos ul li {
+.candidatos ul .candidato-item {
     text-align: center;
     display: inline-block;
     margin: 0 .2em;
@@ -119,7 +120,7 @@ footer {
     transition: .3s all;
 }
 
-.candidatos ul li:hover {
+.candidatos ul .candidato-item:hover {
     margin: 0 .5em;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -127,16 +128,35 @@ footer {
     box-shadow: 0 2px 5px rgb(56, 56, 56);
 }
 
-.candidatos ul li img,
-.candidatos ul li div {
+.candidatos ul .candidato-item img,
+.candidatos ul .candidato-item div {
     display: block;
+    pointer-events: none;
 }
 
-.candidatos ul li img {
+.candidatos ul .candidato-item img {
     height: 180px;
     width: auto;
 }
 
-.candidatos ul li div {
+.candidatos ul .candidato-item div {
     margin-top: .5em;
+}
+
+.candidatos button {
+    display: block;
+    font-size: 1.1em;
+    background-color: rgb(62, 121, 39);
+    color: white;
+    margin: 0 auto;
+    border: 2px solid rgb(51, 90, 36);
+    border-radius: 5px;
+    padding: 5px 0;
+    width: 200px;
+    transition: .3s all;
+}
+
+.candidatos button:hover {
+    background-color: rgb(44, 104, 21);
+    border: 2px solid rgb(32, 61, 20);
 }
