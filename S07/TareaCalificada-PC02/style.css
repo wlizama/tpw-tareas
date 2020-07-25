@@ -1,0 +1,142 @@
+* {
+    box-sizing: content-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:white;
+    background-image: url("./images/cream-pixels.png");
+}
+
+header {
+    height: 5em;
+    font-size: 1.2em;
+    text-align: center;
+    width: 100%;
+    background-color: rgb(31, 44, 78);
+    color: white;
+}
+header h1 {
+    padding: 0;
+    margin: .5em 0;
+}
+
+main {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background-color: rgb(31, 44, 78);
+    height: 5em;
+    font-size: .8em;
+    color: rgb(202, 202, 202);
+}
+
+.frm-registro {
+    background-color: rgba(233, 233, 233, 0.6);
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid rgb(232, 232, 232);
+    border-bottom: 1px solid rgb(232, 232, 232)
+}
+
+.frm-registro div {
+    padding: .7em 0;
+    display: inline-block;
+}
+
+.frm-registro div label {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.frm-registro div input[type="text"] {
+    height: 28px;
+    font-size: 1.4em;
+    border-radius: 0;
+    outline-color: rgba(31, 44, 78, 0.7);
+    border: 1px solid rgb(31, 44, 78);
+    width: 280px;
+    margin: 0 10px;
+}
+
+.frm-registro div button[type="submit"] {
+    padding: 4px 15px;
+    background-color: rgb(41, 58, 102);
+    color: white;
+    font-size: 1.1em;
+    border: 2px solid rgb(16, 22, 39);
+    border-radius: 4px;
+}
+
+.frm-registro div button[type="submit"]:hover,
+.frm-registro div button[type="submit"]:active {
+    background-color: rgb(13, 33, 85);
+    border: 2px solid rgb(16, 22, 39);
+}
+
+.candidatos {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(31, 44, 78, 0.31);
+    padding: 1.2em 0;
+    border-top: 1px solid rgb(151, 164, 197);
+    border-bottom: 1px solid rgb(151, 164, 197)
+}
+
+.candidatos ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0 auto;
+    align-content: space-between;
+    list-style: none;
+    height: 280px;
+}
+
+.candidatos ul li {
+    text-align: center;
+    display: inline-block;
+    margin: 0 .2em;
+    padding: .5em;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgb(201, 201, 201);
+    cursor: pointer;
+    transition: .3s all;
+}
+
+.candidatos ul li:hover {
+    margin: 0 .5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border: 1px solid rgb(138, 138, 138);
+    box-shadow: 0 2px 5px rgb(56, 56, 56);
+}
+
+.candidatos ul li img,
+.candidatos ul li div {
+    display: block;
+}
+
+.candidatos ul li img {
+    height: 180px;
+    width: auto;
+}
+
+.candidatos ul li div {
+    margin-top: .5em;
+}
