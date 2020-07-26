@@ -43,11 +43,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PE - Lorem Ipsum</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style01.css">
 </head>
 <body>
     <header>
-        <h1>Proceso electoral - Asociacion Lorem Ipsum</h1>
+        <h1>Practica calificada - resultados</h1>
     </header>
     <main>
         <section class="resultados">

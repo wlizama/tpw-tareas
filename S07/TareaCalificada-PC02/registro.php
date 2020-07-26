@@ -14,11 +14,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PE - Lorem Ipsum</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style01.css">
 </head>
 <body>
     <header>
-        <h1>Proceso electoral - Asociacion Lorem Ipsum</h1>
+        <h1>Practica calificada 02</h1>
     </header>
     <main>
         <section id="sectRegistro" class="registro">
@@ -56,6 +56,6 @@
     <footer>
         <span>&copy; Lizama Garcia Wilder H. - 2020 Todos los derechos reservados</span>
      </footer>
-     <script src="script.js"></script>
+     <script src="script01.js"></script>
 </body>
 </html>
