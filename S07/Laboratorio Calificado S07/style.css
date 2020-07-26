@@ -1,0 +1,230 @@
+* {
+    box-sizing: content-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:white;
+    background-image: url("./images/cream-pixels.png");
+}
+
+header {
+    height: 5em;
+    font-size: 1.2em;
+    text-align: center;
+    width: 100%;
+    background-color: rgb(31, 44, 78);
+    color: white;
+}
+header h1 {
+    padding: 0;
+    margin: .5em 0;
+}
+
+main {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background-color: rgb(31, 44, 78);
+    height: 5em;
+    font-size: .8em;
+    color: rgb(202, 202, 202);
+}
+
+.registro {
+    background-color: rgba(233, 233, 233, 0.6);
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid rgb(232, 232, 232);
+    border-bottom: 1px solid rgb(232, 232, 232)
+}
+
+.registro div {
+    padding: .7em 0;
+    display: inline-block;
+}
+
+.registro div label {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.registro div input {
+    height: 28px;
+    font-size: 1.4em;
+    border-radius: 0;
+    outline-color: rgba(31, 44, 78, 0.7);
+    border: 1px solid rgb(31, 44, 78);
+    width: 280px;
+    margin: 0 10px;
+}
+
+.registro div button {
+    padding: 4px 15px;
+    background-color: rgb(41, 58, 102);
+    color: white;
+    font-size: 1.1em;
+    border: 2px solid rgb(16, 22, 39);
+    border-radius: 4px;
+    transition: .3s all;
+}
+
+.registro div button:hover {
+    background-color: rgb(13, 33, 85);
+    border: 2px solid rgb(16, 22, 39);
+}
+
+.candidatos {
+    display: none;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(31, 44, 78, 0.31);
+    padding: 1.2em 0;
+    border-top: 1px solid rgb(151, 164, 197);
+    border-bottom: 1px solid rgb(151, 164, 197)
+}
+
+.candidatos ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0 auto;
+    align-content: space-between;
+    list-style: none;
+    height: 280px;
+}
+
+.candidatos ul .candidato-item {
+    text-align: center;
+    display: inline-block;
+    margin: 0 .2em;
+    padding: .5em;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgb(201, 201, 201);
+    cursor: pointer;
+    transition: .3s all;
+}
+
+.candidatos ul .candidato-item:hover {
+    margin: 0 .5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border: 1px solid rgb(138, 138, 138);
+    box-shadow: 0 2px 5px rgb(56, 56, 56);
+}
+
+.candidatos ul .candidato-item img,
+.candidatos ul .candidato-item div {
+    display: block;
+    pointer-events: none;
+}
+
+.candidatos ul .candidato-item img {
+    height: 180px;
+    width: auto;
+}
+
+.candidatos ul .candidato-item div {
+    margin-top: .5em;
+}
+
+.sectboton-result {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(31, 44, 78, 0.31);
+    padding: 1.2em 0;
+    border-top: 1px solid rgb(151, 164, 197);
+    border-bottom: 1px solid rgb(151, 164, 197)
+}
+
+.sectboton-result button {
+    display: block;
+    font-size: 1.1em;
+    background-color: rgb(62, 121, 39);
+    color: white;
+    margin: 0 auto;
+    border: 2px solid rgb(51, 90, 36);
+    border-radius: 5px;
+    padding: 5px 0;
+    width: 200px;
+    transition: .3s all;
+}
+
+.sectboton-result button:hover {
+    background-color: rgb(44, 104, 21);
+    border: 2px solid rgb(32, 61, 20);
+}
+
+.resultados {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(31, 44, 78, 0.31);
+    padding: 1.2em 0;
+    border-top: 1px solid rgb(151, 164, 197);
+    border-bottom: 1px solid rgb(151, 164, 197);
+    display: flex;
+    flex-direction: column;
+}
+
+.resultados ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: .5em;
+}
+
+.resultados ul li {
+    margin-bottom: 5px;
+    border-bottom: 2px dashed rgb(134, 134, 134);
+    display: flex;
+    padding-bottom: 5px;
+}
+
+.resultados ul li img {
+    height: 150px;
+    width: auto;
+}
+
+.resultados ul li .resultado-item-column {
+    height: 150px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.resultados button {
+    display: block;
+    font-size: 1.1em;
+    background-color: rgb(62, 121, 39);
+    color: white;
+    margin: 0 auto;
+    margin-top: 1em;
+    border: 2px solid rgb(51, 90, 36);
+    border-radius: 5px;
+    padding: 5px 0;
+    width: 200px;
+    transition: .3s all;
+}
+
+.resultados button:hover {
+    background-color: rgb(44, 104, 21);
+    border: 2px solid rgb(32, 61, 20);
+}
