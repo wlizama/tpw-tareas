@@ -91,7 +91,7 @@ footer {
 }
 
 .candidatos {
-    visibility: hidden;
+    display: none;
     width: 100%;
     text-align: center;
     background-color: rgba(31, 44, 78, 0.31);
@@ -143,7 +143,16 @@ footer {
     margin-top: .5em;
 }
 
-.candidatos button {
+.sectboton-result {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(31, 44, 78, 0.31);
+    padding: 1.2em 0;
+    border-top: 1px solid rgb(151, 164, 197);
+    border-bottom: 1px solid rgb(151, 164, 197)
+}
+
+.sectboton-result button {
     display: block;
     font-size: 1.1em;
     background-color: rgb(62, 121, 39);
@@ -156,7 +165,66 @@ footer {
     transition: .3s all;
 }
 
-.candidatos button:hover {
+.sectboton-result button:hover {
+    background-color: rgb(44, 104, 21);
+    border: 2px solid rgb(32, 61, 20);
+}
+
+.resultados {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(31, 44, 78, 0.31);
+    padding: 1.2em 0;
+    border-top: 1px solid rgb(151, 164, 197);
+    border-bottom: 1px solid rgb(151, 164, 197);
+    display: flex;
+    flex-direction: column;
+}
+
+.resultados ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: .5em;
+}
+
+.resultados ul li {
+    margin-bottom: 5px;
+    border-bottom: 2px dashed rgb(134, 134, 134);
+    display: flex;
+    padding-bottom: 5px;
+}
+
+.resultados ul li img {
+    height: 150px;
+    width: auto;
+}
+
+.resultados ul li .resultado-item-column {
+    height: 150px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.resultados button {
+    display: block;
+    font-size: 1.1em;
+    background-color: rgb(62, 121, 39);
+    color: white;
+    margin: 0 auto;
+    margin-top: 1em;
+    border: 2px solid rgb(51, 90, 36);
+    border-radius: 5px;
+    padding: 5px 0;
+    width: 200px;
+    transition: .3s all;
+}
+
+.resultados button:hover {
     background-color: rgb(44, 104, 21);
     border: 2px solid rgb(32, 61, 20);
 }

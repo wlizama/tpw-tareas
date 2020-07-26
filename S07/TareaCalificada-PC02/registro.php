@@ -1,4 +1,13 @@
-<?php include("./include/data.php") ?>
+<?php
+    include("./include/data.php");
+    // eliminar   al ingresar a la página
+    session_start();
+
+    unset($_SESSION["DNIs_registrados"]);
+    foreach (CANDIDATOS as $candidato) {
+        unset($_SESSION["votos_".strtolower($candidato["candidato"])]);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,6 +48,8 @@
                 } 
                 ?>
             </ul>
+        </section>
+        <section class="sectboton-result">
             <button id="btnVerResult" type="button">Ver Resultados</button>
         </section>
     </main>

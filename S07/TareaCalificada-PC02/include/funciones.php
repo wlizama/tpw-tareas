@@ -1,19 +1,19 @@
 <?php
 include("./data.php");
 
+session_start();
 
 $accion = $_POST["accion"];
 
-
-// crea cookies para guardar datos
-function crearCookieSiNoExiste($cookie_name, $init_val = "") {
-    if (!isset($_COOKIE[$cookie_name])) {
-        setcookie($cookie_name, $init_val, time()+3600);
+// crea Sessions para guardar datos
+function crearSessionSiNoExiste($session_name, $init_val = "") {
+    if (!isset($_SESSION[$session_name])) {
+        $_SESSION[$session_name] =  $init_val;
     }
 }
 
-function updateCookie($cookie_name, $val) {
-    setcookie($cookie_name, $val, time()+3600);
+function updateSession($session_name, $val) {
+    $_SESSION[$session_name] =  $val;
 }
 
 
@@ -22,10 +22,10 @@ if ($accion == "valida_dni") {
 }
 // valida se el DNI existe en archivo de votos
 function validarDNI() {
-    crearCookieSiNoExiste("DNIs_registrados");
+    crearSessionSiNoExiste("DNIs_registrados");
     $dni = $_POST["dni"];
     $existe_dni = false;
-    $DNIs_registrados =  explode("|", $_COOKIE["DNIs_registrados"]);
+    $DNIs_registrados =  explode("|", $_SESSION["DNIs_registrados"]);
     
     if (in_array($dni, $DNIs_registrados))
         echo "El Nro. de DNI ingresado ya voto, por favor volver a ingresar.";
@@ -36,22 +36,32 @@ function validarDNI() {
 if ($accion == "votar") {
     votar();
 }
-// escribir al final del archivo de votos
+// almacenamos votos y DNIs en Sessions
 function votar() {
+
+    // creamos dinamicamente las Sessions
     foreach (CANDIDATOS as $candidato) {
-        crearCookieSiNoExiste("votos_".strtolower($candidato["candidato"]), 0);
+        crearSessionSiNoExiste("votos_".strtolower($candidato["candidato"]), 0);
     }
 
+    $DNIs_registrados =  explode("|", $_SESSION["DNIs_registrados"]);
     $dni = $_POST["dni"];
     $voto = $_POST["voto"];
-    $nombre_cookie = "votos_".strtolower($_POST["voto"]);
+    $nombre_SESSION = "votos_".strtolower($_POST["voto"]);
 
-    $voto_ant = $_COOKIE[$nombre_cookie];
-    $voto_nuevo = intval($voto_ant) + 1;
-    
-    // updateCookie()
-    
-    updateCookie($nombre_cookie, $voto_nuevo);
+    // verificar si no existe
+    if (!in_array($dni, $DNIs_registrados)) {
 
-    echo "ok,".$_COOKIE[$nombre_cookie];
+        $voto_ant = $_SESSION[$nombre_SESSION];
+        $voto_nuevo = intval($voto_ant) + 1;
+        
+        array_push($DNIs_registrados, $dni);
+        updateSession("DNIs_registrados", implode("|", $DNIs_registrados));
+        
+        updateSession($nombre_SESSION, $voto_nuevo);
+
+        echo "ok";
+    }
+    else
+        echo "El Nro. de DNI ingresado ya voto, por favor volver a ingresar.";
 }

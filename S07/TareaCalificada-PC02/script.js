@@ -23,7 +23,7 @@ function onClickValidarDNI(evt) {
             .then(function (val){
                 if (val === "ok") {
                      // mostrar candidatos para votar y desahbilitar boton e input
-                    document.getElementById("sectCandidatos").style.visibility = 'visible'
+                    document.getElementById("sectCandidatos").style.display = 'block'
                     document.getElementById("txtDNI").disabled = true
                     document.getElementById("btnValidaDNI").disabled = true
                 }
@@ -32,7 +32,7 @@ function onClickValidarDNI(evt) {
                     alert(val)
                     document.getElementById("txtDNI").value = ""
                     document.getElementById("txtDNI").focus()
-                    document.getElementById("sectCandidatos").style.visibility = 'hidden'  
+                    document.getElementById("sectCandidatos").style.display = 'none'  
                 }
             })
             .catch(function (err) {
@@ -75,19 +75,15 @@ function onClickCanditatoItem (evt) {
                 throw "Error al emitir voto"
         })
         .then(function (val){
-            if (val === "ok") {
-            //      // mostrar candidatos para votar y desahbilitar boton e input
-            //     document.getElementById("sectCandidatos").style.visibility = 'visible'
-            //     document.getElementById("txtDNI").disabled = true
-            //     document.getElementById("btnValidaDNI").disabled = true
-            }
-            else {
-            //     // mostrar error y limpiar
+            document.getElementById("sectCandidatos").style.display = 'none'
+            document.getElementById("txtDNI").disabled = false
+            document.getElementById("btnValidaDNI").disabled = false
+            document.getElementById("txtDNI").value = ""
+            document.getElementById("txtDNI").focus()
+            if (val === "ok")
+                alert("Voto registrado correctamente")
+            else
                 alert(val)
-            //     document.getElementById("txtDNI").value = ""
-            //     document.getElementById("txtDNI").focus()
-            //     document.getElementById("sectCandidatos").style.visibility = 'hidden'  
-            }
         })
         .catch(function (err) {
             if (err) return console.log(err)
@@ -95,8 +91,15 @@ function onClickCanditatoItem (evt) {
     }
 }
 
+function onClickVerResult() {
+    window.location = "resultados.php"
+}
+
+
 function init() {
 
+    // autofoco al input DNI
+    document.getElementById("txtDNI").focus()
 
     // inicializar eventos
     document.getElementById("btnValidaDNI").addEventListener("click", onClickValidarDNI)
@@ -104,6 +107,8 @@ function init() {
     candidatosItems.forEach(function (item) {
         item.addEventListener("click", onClickCanditatoItem)
     })
+
+    document.getElementById("btnVerResult").addEventListener("click", onClickVerResult)
 }
 
 window.addEventListener("load", init)
