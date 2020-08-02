@@ -1,17 +1,8 @@
-#!/bin/bash
+docker run -p 3306:3306 --name tpw-s08 -v /home/wilderlizama/WildPersonal/Software/data-mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=secret -d mysql:5.7
+docker run -p 5001:80 -v /home/wilderlizama/WildPersonal/Develop/other-apps/tpw-tareas/S08/laboratorio:/var/www/html --name myphpserverS08 -d --link tpw-s08 php:7.2-apache
 
-docker rm s08-mysql --force
-# docker run -d -p 3306:3306 --name s08-mysql -e MYSQL_ROOT_PASSWORD=secret --mount src=s08-mysql-data,dst=/var/lib/mysql mysql
-docker run -d -p 3306:3306 --name s08-mysql -e MYSQL_ROOT_PASSWORD=secret --mount src=s08-mysql-data,dst=/var/lib/mysql mysql --default-authentication-plugin=mysql_native_password
-# docker run -d --name s08-mysql --mount src=s08-mysql-data,dst=/var/lib/mysql mysql
-
-docker rmi tpw-s08 --force
-docker build -t tpw-s08 .
-# docker run -p 5001:80 tpw-s08
-docker run -p 5001:80 tpw-s08 --link s08-mysql:mysql
-
-# for a in `docker ps -a -q`
-# do
-#   echo "Stopping container - $a"
-#   docker stop $a
-# done
+docker ps
+docker exec -i -t myphpserverS08 bash
+# docker-php-ext-install mysqli
+# cd /usr/local/etc/php
+docker restart myphpserverS08
