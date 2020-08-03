@@ -11,9 +11,9 @@
         <form class="content" action="./index2.php" method="post">
             <h1>Inicio de sessión</h1>
             <div class="content-block">
-                <label for="txtUsuario">Nombre de usuario:</label>
-                <input id="txtUsuario" name="usuario" type="text" />
-                <input id="txtPassword" name="password" type="password" />
+                <label for="txtUsuario">Datos de usuario:</label>
+                <input id="txtUsuario" name="usuario" type="text" placeholder="Nombre" />
+                <input id="txtPassword" name="password" type="password" placeholder="Contraseña" />
             </div>
             <div class="content-block">
                 <button type="submit">Ingresar</button>
